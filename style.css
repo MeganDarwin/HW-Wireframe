@@ -8,10 +8,12 @@ body {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 16px;
 	background: #777;
-	margin-left:auto;
-    margin-right:auto;
-    width:960px;    
-	
+	margin-left: auto;
+	margin-right: auto;
+    width:960px; 
+    position: relative; 
+
+
 }
 
 
@@ -36,22 +38,21 @@ section {
 	color: #777;
 	text-align:center;
 	float:left;
-	overflow: auto;
 	height: 250px;
 	width: 495px;
 	margin-bottom: 20px;
 	padding: 20px;
+	overflow: hidden;
 	}
+
 
 	
 
 article {
 	background-color: #777;
 	color: #ebebeb;
-	overflow: auto;
 	padding: 10px;
 	margin:5px;
-	
 
 }
 
@@ -75,27 +76,36 @@ p {
 
 }
 
+/* I changed the width of this to fit, in the directions it said to keep "sections" at 495px, which I assume also included the aside.
+I wasn't able to get the overflow hidden after multiple attempts and researching (such as having the parent element set as relative )
+I assume this method of resizing is incorrect since if the item was an image it couldn't be resized to make it fit, but since 
+I am new to this I wasn't able to figure it out on my own. Thank you!\*/
+
 
 aside {
 	background-color: #ebebeb;
 	color: #777;
 	text-align: center;
-	width: 445px;
-	height:250px;
+	width: 440px;
+	height: 250px;
 	float: left;
-	padding: 20px;
+	padding:  20px;
 	margin-bottom:20px;
 	margin-left:20px;
-	
+	position: absolute;
+	left: 500px;
+	overflow: hidden;
 }
 
-.clearfix::after{
+.clearfix: after{
      content:"";
+    visibility: hidden;
      display: block;
      clear: both;
 }
 
 footer {
+	clear: both;
 	background-color: #ebebeb;
 	color: #777;
 	text-align: center;
